@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceSurvive</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white; /* Set text color to white */
+        }
+        #score {
+            position: absolute;
+            top: 20px;
+            left: 100px;
+        }
+        #controls {
+            position: absolute;
+            bottom: 50px;
+            left: 100px;
+        }
+
+        #controls ul {
+            list-style: none;
+        }
+
+        #bgvid {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: 100vw;
+            height: 100vh;
+            z-index: -100;
+            transform: translateX(-50%) translateY(-50%);
+            background: url('your-video-file.mp4') no-repeat;
+            background-size: cover;
+        }
+        canvas {
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333; /* Dark background color */
+            color: white; /* Text color */
+            padding: 10px;
+            text-align: center;
+        }
+        footer a {
+            color: white; /* Link color */
+            text-decoration: none; /* Remove underline */
+        }
+        footer a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+        #targetscore{
+         
+            position: absolute;
+            top: 60px;
+            left: 100px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="score"></div>
+    <div id="targetscore">TARGET SCORE: 60</div>
+    <div id="controls">
+        CONTROLS:
+        <ul>
+            <li>W -- JUMP</li>
+            <li>D -- RIGHT</li>
+            <li>A -- LEFT</li>
+            <li>ctrl+r -- REFRESH</li>
+        </ul>
+    </div>
+    <video autoplay loop muted id="bgvid">
+        <source src="pixabay2.mp4" type="video/mp4">
+    </video>
+    <canvas></canvas>
+    <footer>
+        &copy; SpaceSurvive --Audios, videos, and images picked from:
+        <a href="https://kenney.nl/">kenney.nl</a>,
+        <a href="https://pixabay.com/">pixabay.com</a>,
+        <a href="https://www.freepik.com/">freepick.com</a>,
+        <a href="https://quicksounds.com/">quicksounds.com</a>,
+        <a href="https://www.myinstants.com/en/index/in/">Myinstants.com</a>
+    </footer>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
